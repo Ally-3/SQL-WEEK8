@@ -1,0 +1,156 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "SQL",
+    "dateExported": "2023-11-16T17:03:16.985Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "01bb8b7a-18e5-42b9-8517-b18e648ccdc4",
+            "colId": "a7ce9bee-0405-4dec-a564-88589e3be46e",
+            "containerId": "",
+            "name": "List All Books",
+            "url": "http://localhost:5001/listallbooks",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-11-16T14:04:01.569Z",
+            "modified": "2023-11-16T14:04:01.569Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2775c9b6-9724-4c21-a733-d2cf45852bcc",
+            "colId": "a7ce9bee-0405-4dec-a564-88589e3be46e",
+            "containerId": "",
+            "name": "Add a Book",
+            "url": "http://localhost:5001/addBook",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-11-16T14:04:11.128Z",
+            "modified": "2023-11-16T14:04:11.128Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\" : \"sarria to santiago\",\n  \"author\" : \"MJ McCarthy\",\n  \"publisher\" : \"amazon\",\n  \"genre\" : \"travel guide\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "83310b50-29f9-4308-b1f8-62437e8114d2",
+            "colId": "a7ce9bee-0405-4dec-a564-88589e3be46e",
+            "containerId": "",
+            "name": "Update Publisher",
+            "url": "http://localhost:5001/updatepublisher",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-11-16T15:20:52.202Z",
+            "modified": "2023-11-16T15:20:52.202Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\" : \"sarria to santiago\",\n  \"newPublisher\" : \"new publisher\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "806747e0-0426-4737-84a9-6d1bd83f676f",
+            "colId": "a7ce9bee-0405-4dec-a564-88589e3be46e",
+            "containerId": "",
+            "name": "Book Deleted",
+            "url": "http://localhost:5001/deletebook",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-11-16T15:27:29.092Z",
+            "modified": "2023-11-16T15:27:29.092Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\" : \"sarria to santiago\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6368a2b0-cea8-4fda-b6c8-29d456a9a8df",
+            "colId": "a7ce9bee-0405-4dec-a564-88589e3be46e",
+            "containerId": "",
+            "name": "Update Genre",
+            "url": "http://localhost:5001/updategenre",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2023-11-16T16:26:49.425Z",
+            "modified": "2023-11-16T16:30:09.306Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\" : \"sarria to santiago\",\n  \"newGenre\" : \"adventure\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e1bb0843-044c-43ed-8845-341b7807abff",
+            "colId": "a7ce9bee-0405-4dec-a564-88589e3be46e",
+            "containerId": "",
+            "name": "Update Author",
+            "url": "http://localhost:5001/updateauthor",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2023-11-16T16:27:10.839Z",
+            "modified": "2023-11-16T16:34:56.271Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"title\" : \"sarria to santiago\",\r\n  \"newAuthor\" : \"Anon\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "104860c6-1e14-45c8-9275-1817a1a8be1e",
+            "colId": "a7ce9bee-0405-4dec-a564-88589e3be46e",
+            "containerId": "",
+            "name": "Get a Book by Author",
+            "url": "http://localhost:5001/booksbyauthor",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-11-16T16:27:32.090Z",
+            "modified": "2023-11-16T16:52:51.085Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"author\" : \"MJ McCarthy\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5243497a-904f-4976-bdc0-1a9b4ad6b79d",
+            "colId": "a7ce9bee-0405-4dec-a564-88589e3be46e",
+            "containerId": "",
+            "name": "Delete All Books",
+            "url": "http://localhost:5001/deleteallbooks",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-11-16T16:27:53.290Z",
+            "modified": "2023-11-16T16:41:58.995Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "http://localhost:5001"
+        }
+    }
+}
