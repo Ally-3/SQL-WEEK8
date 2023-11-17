@@ -13,16 +13,15 @@ const Book = require("./books/bookmodel");
 const bookRouter = require("./routes/bookroutes");
 
 function syncTables() {
-  Book.sync({ alter: true });
+    Author.hasMany(Book)
+    Book.belongsTo(Author)
+    Book.sync({ alter: true });
+    Author.sync({ alter: true });
 }
 
 //IMPORTING - AUTHORS
 const Author = require("./authors/authormodel");
 const authorRouter = require("./routes/authorroutes");
-
-function syncTables() {
-  Author.sync({ alter: true });
-}
 
 // MIDDLEWARE SETUP - CONNECTING TO REACT FRONT END LATER
 app.use(cors());

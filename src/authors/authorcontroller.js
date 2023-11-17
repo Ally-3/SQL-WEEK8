@@ -5,7 +5,6 @@ const Book = require("../books/bookmodel");
 async function addAuthor(req, res) {
     try {
         const newAuthor = {
-            author_ID : [],
             author : req.body.author
         }
 
@@ -27,16 +26,17 @@ async function addAuthor(req, res) {
 //ROUTE 10 - GET - gets a single author by author name and retrieves associated books
 async function assoBooksByAuthor (req, res){
     try {
-        const findAuthor = req.query.author;
-
-        const findBooksByAuthor = await Author.findOne({
-            where : {
-                author: findAuthor
-            },
-            include : [Book],
-        });
-
-        res.status(200).json(findBooksbyAuthor);
+        const findAuthor = req.body.author;
+        console.log(findAuthor)
+        const author = await Author.findOne({
+            where : { author : findAuthor}
+        })
+        console.log(author)
+        const books = await Book.findAll({
+            where : { author_ID : author.author_ID}
+        })
+     
+        res.status(200).json(books);
     
     } catch (error) {
         res.status(501).json({ 

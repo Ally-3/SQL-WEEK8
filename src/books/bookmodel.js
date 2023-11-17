@@ -7,8 +7,8 @@ const Book = SQLconnection.define("Book", {
     allowNull: false,
     unique: true
   },
-  author: {
-    type: DataTypes.STRING
+  author_ID: {
+    type: DataTypes.INTEGER
   },
   publisher: {
     type: DataTypes.STRING
