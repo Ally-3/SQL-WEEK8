@@ -12,16 +12,26 @@ const port = process.env.PORT || 5002;
 const Book = require("./books/bookmodel");
 const bookRouter = require("./routes/bookroutes");
 
-function syncTables() {
-    Author.hasMany(Book)
-    Book.belongsTo(Author)
-    Book.sync({ alter: true });
-    Author.sync({ alter: true });
-}
-
-//IMPORTING - AUTHORS
+// IMPORTING - AUTHORS
 const Author = require("./authors/authormodel");
 const authorRouter = require("./routes/authorroutes");
+
+// IMPORTING - GENRES
+const Genre = require("./genres/genremodel");
+const genreRouter = require("./routes/genreroutes");
+
+// SYNCING TABLES
+function syncTables() {
+    Author.hasMany(Book) //ASSOCIATIONS
+    Book.belongsTo(Author)
+
+    Genre.hasMany(Book)
+    Book.belongsTo(Genre)
+
+    Book.sync({ alter: true });
+    Author.sync({ alter: true });
+    Genre.sync({ alter: true });
+}
 
 // MIDDLEWARE SETUP - CONNECTING TO REACT FRONT END LATER
 app.use(cors());

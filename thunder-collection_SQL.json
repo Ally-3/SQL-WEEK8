@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "SQL",
-    "dateExported": "2023-11-17T15:14:24.897Z",
+    "dateExported": "2023-11-17T16:44:56.865Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -47,12 +47,31 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2023-11-17T14:50:40.428Z",
-            "modified": "2023-11-17T14:55:10.171Z",
+            "modified": "2023-11-17T16:03:14.204Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"author_ID\" : [],\n  \"author\" : \"JK Rowling\"\n}",
+                "raw": "{\n  \"author\" : \"MJ McCarthy\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8c2f71cd-1947-453a-8daf-313c452ea4ea",
+            "colId": "a7ce9bee-0405-4dec-a564-88589e3be46e",
+            "containerId": "",
+            "name": "Add a Genre",
+            "url": "http://localhost:5001/addgenre",
+            "method": "POST",
+            "sortNum": 35000,
+            "created": "2023-11-17T16:43:33.324Z",
+            "modified": "2023-11-17T16:44:14.760Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"genre\" : \"fantasy\"\n}",
                 "form": []
             },
             "tests": []
@@ -175,19 +194,31 @@
             "method": "GET",
             "sortNum": 100000,
             "created": "2023-11-17T14:45:43.852Z",
-            "modified": "2023-11-17T15:13:59.426Z",
+            "modified": "2023-11-17T15:19:04.317Z",
             "headers": [],
-            "params": [
-                {
-                    "name": "author",
-                    "value": "",
-                    "isDisabled": true,
-                    "isPath": false
-                }
-            ],
+            "params": [],
             "body": {
                 "type": "json",
                 "raw": "{\n  \"author\" : \"MJ McCarthy\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "41f43058-a9d0-4d73-9dac-c74f7bbc09a8",
+            "colId": "a7ce9bee-0405-4dec-a564-88589e3be46e",
+            "containerId": "",
+            "name": "books by genre",
+            "url": "http://localhost:5001/assobooksbygenre",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2023-11-17T16:40:49.381Z",
+            "modified": "2023-11-17T16:42:49.139Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"genre\" : \"travel guide\"\n}",
                 "form": []
             },
             "tests": []
