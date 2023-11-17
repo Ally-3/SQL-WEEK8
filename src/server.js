@@ -16,6 +16,14 @@ function syncTables() {
   Book.sync({ alter: true });
 }
 
+//IMPORTING - AUTHORS
+const Author = require("./authors/authormodel");
+const authorRouter = require("./routes/authorroutes");
+
+function syncTables() {
+  Author.sync({ alter: true });
+}
+
 // MIDDLEWARE SETUP - CONNECTING TO REACT FRONT END LATER
 app.use(cors());
 
@@ -23,7 +31,7 @@ app.use(cors());
 app.use(express.json());
 
 // CONNECTION TO ROUTING TABLE THROUGH ROUTES
-app.use(bookRouter);
+app.use(bookRouter, authorRouter);
 
 // HEALTH ROUTE - BASIC TEST TO SEE IF SERVER IS WORKING AND HELPING DIAGNOSE
 app.get("/health", (req, res) => res.status(200).json({ message: "server is alive" }));

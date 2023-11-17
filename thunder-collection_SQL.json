@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "SQL",
-    "dateExported": "2023-11-16T17:03:16.985Z",
+    "dateExported": "2023-11-17T15:14:24.897Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -34,6 +34,25 @@
             "body": {
                 "type": "json",
                 "raw": "{\n  \"title\" : \"sarria to santiago\",\n  \"author\" : \"MJ McCarthy\",\n  \"publisher\" : \"amazon\",\n  \"genre\" : \"travel guide\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e98231aa-3cbd-4447-8578-20801f1e6dc8",
+            "colId": "a7ce9bee-0405-4dec-a564-88589e3be46e",
+            "containerId": "",
+            "name": "Add a Author",
+            "url": "http://localhost:5001/addauthor",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-11-17T14:50:40.428Z",
+            "modified": "2023-11-17T14:55:10.171Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"author_ID\" : [],\n  \"author\" : \"JK Rowling\"\n}",
                 "form": []
             },
             "tests": []
@@ -145,6 +164,32 @@
             "modified": "2023-11-16T16:41:58.995Z",
             "headers": [],
             "params": [],
+            "tests": []
+        },
+        {
+            "_id": "48f2dc14-6aed-409c-9aa8-13d2acf1e2e4",
+            "colId": "a7ce9bee-0405-4dec-a564-88589e3be46e",
+            "containerId": "",
+            "name": "Associated books by author",
+            "url": "http://localhost:5001/assobooksbyauthor",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-11-17T14:45:43.852Z",
+            "modified": "2023-11-17T15:13:59.426Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "author",
+                    "value": "",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"author\" : \"MJ McCarthy\"\n}",
+                "form": []
+            },
             "tests": []
         }
     ],
