@@ -40,7 +40,7 @@ app.use(cors());
 app.use(express.json());
 
 // CONNECTION TO ROUTING TABLE THROUGH ROUTES
-app.use(bookRouter, authorRouter);
+app.use(bookRouter, authorRouter, genreRouter);
 
 // HEALTH ROUTE - BASIC TEST TO SEE IF SERVER IS WORKING AND HELPING DIAGNOSE
 app.get("/health", (req, res) => res.status(200).json({ message: "server is alive" }));
